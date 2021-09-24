@@ -1,0 +1,20 @@
+public class Run {
+    public static void main(String[] args) {
+        int x = (int) Math.floor(Math.random() * 10);
+        Shape[] shapes = new Shape[4];
+        shapes[0] = new Circle(x, "yellow", false);
+        shapes[1] = new Rectangle(x, x, "infinity", true);
+        shapes[2] = new Square(x, "melinda", true);
+        shapes[3] = new Square(x, "blue", false);
+
+        for (Shape a : shapes){
+            System.out.println(a);
+        }
+
+        for (Shape a : shapes) {
+            a.resize(Math.floor(Math.random() * 100)+1);
+        }
+        System.out.println("\nAfter: \n");
+        Shape.printShape(shapes);
+    }
+}
